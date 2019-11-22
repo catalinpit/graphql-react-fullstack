@@ -1,0 +1,21 @@
+{
+  "name": "graphql-um",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/catalinpit/GraphQL-UM.git",
+  "author": "Catalin Pit <catalinpit@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon node ./server/index.js",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "prisma-client-lib": "^1.34.10"
+  },
+  "devDependencies": {
+    "eslint": "6.6.0"
+  }
+}

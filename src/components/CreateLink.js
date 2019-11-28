@@ -28,7 +28,7 @@ class CreateLink extends Component {
                     <input
                         className="mb2"
                         value={description}
-                        onChange={() => this.setState({ description: e.target.value })}
+                        onChange={ e => this.setState({ description: e.target.value })}
                         type="text"
                         placeholder="Link description"
                     />
@@ -36,17 +36,13 @@ class CreateLink extends Component {
                     <input 
                         className="mb2"
                         value={url}
-                        onChange={() => this.setState({ url: e.target.value })}
+                        onChange={ e => this.setState({ url: e.target.value })}
                         type="text"
                         placeholder="Link URL"
                     />
                 </div>
                 <Mutation mutation={CREATE_LINK_MUTATION} variables={{ description, url }}>
-                    {postMutation => (
-                        <button onClick={postMutation}>
-                            Submit
-                        </button>
-                    )};
+                    {postMutation => <button onClick={postMutation}>Submit</button>}
                 </Mutation>
             </div>
         );
